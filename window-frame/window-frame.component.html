@@ -1,0 +1,7 @@
+<div [style.background-color]="color" class="app-name">{{appName}}</div>
+<div class="button__container">
+    <div (click)="onMinimizeBtnClick($event)" class="button" [style.background-color]="color">&#xE921;</div>
+    <div *ngIf="!maximized" (click)="onMaximizeBtnClick()" class="button" [style.background-color]="color">&#xE922;</div>
+    <div *ngIf="maximized" (click)="onUnmaximizeBtnClick()" class="button" [style.background-color]="color">&#xE923;</div>
+    <div (click)="onCloseBtnClick()" class="button button--close" [style.background-color]="color">&#xE8BB;</div>
+</div>
